@@ -49,6 +49,7 @@ class DealerController extends Controller
                 'table_id' => $request->table_id
             ]);
     
+            
             return response()->json(['uzenet' => 'Sikeresen rögzítve.'], 201, options:JSON_UNESCAPED_UNICODE);
         } catch (Throwable $ex) {
             return response()->json(['uzenet' => 'Meghiúsult az adat létrehozása.'], 500, options:JSON_UNESCAPED_UNICODE);
